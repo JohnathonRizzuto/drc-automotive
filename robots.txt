@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://drc-automotive.vercel.app/sitemap.xml
