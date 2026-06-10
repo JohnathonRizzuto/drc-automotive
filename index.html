@@ -80,7 +80,7 @@
   --body:'Barlow', sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{
   background:var(--ink);color:var(--text);font-family:var(--body);
   font-size:18px;line-height:1.65;font-weight:400;overflow-x:hidden;-webkit-font-smoothing:antialiased;
@@ -241,13 +241,23 @@ section{position:relative;z-index:2}
 }
 @media(max-width:680px){
   body{font-size:17px}
+  .wrap{padding:0 18px}
   .callbox{display:none}
-  .nav{height:70px}
-  .pad{padding:70px 0}
+  .nav{height:68px;gap:12px}
+  .pad{padding:66px 0}
+  .top-strip{font-size:12px;letter-spacing:.3px;padding:8px 14px;line-height:1.4}
   .svc-grid{grid-template-columns:1fr}
-  .hero-inner{padding:64px 0 80px}
-  .hero-cta .btn{flex:1}
+  .hero-inner{padding:58px 0 74px}
+  .hero h1{font-size:2.45rem}
+  .hero .lead{font-size:1.08rem}
+  /* stack the hero buttons full-width so the phone-number CTA never crams/wraps */
+  .hero-cta{gap:12px}
+  .hero-cta .btn{flex:1 1 100%;width:100%}
+  .btn-lg{font-size:17px;padding:17px 24px}
+  .loc-info{padding:30px 24px}
+  .loc-map{min-height:300px}
   .foot-top{flex-direction:column;align-items:flex-start}
+  .foot-contact{gap:16px 26px}
 }
 </style>
 </head>
