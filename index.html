@@ -174,7 +174,7 @@ section{position:relative;z-index:2}
 .svc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red);transform:scaleY(0);transform-origin:bottom;transition:transform .25s;z-index:3}
 .svc:hover{transform:translateY(-4px);border-color:#4a4b52}
 .svc:hover::before{transform:scaleY(1)}
-.svc .card-photo{margin:-30px -24px 20px;border:0;border-bottom:1px solid var(--line);border-radius:7px 7px 0 0;aspect-ratio:16/9}
+.svc .card-photo{margin:-30px -24px 20px;border:0;border-bottom:1px solid var(--line);border-radius:7px 7px 0 0;aspect-ratio:16/9;width:100%;object-fit:cover;display:block;filter:grayscale(.12) contrast(1.05)}
 .svc .ico{width:54px;height:54px;border-radius:6px;background:rgba(200,32,31,.14);display:grid;place-items:center;margin-bottom:18px}
 .svc .ico svg{width:28px;height:28px;stroke:var(--red);fill:none;stroke-width:1.8}
 .svc h3{font-family:var(--sub);font-weight:700;text-transform:uppercase;font-size:1.18rem;letter-spacing:.4px}
@@ -189,6 +189,7 @@ section{position:relative;z-index:2}
 .why-list p{color:var(--muted);font-size:1rem;margin-top:5px}
 .why-photo{position:relative;border-radius:8px;overflow:hidden;border:1px solid var(--line);min-height:430px}
 .why-photo .photo-ph{position:absolute;inset:0;border:0;border-radius:0;aspect-ratio:auto}
+.why-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.12) contrast(1.05)}
 .why-photo .stamp{
   position:absolute;bottom:22px;left:22px;z-index:3;background:var(--red);color:#fff;
   font-family:var(--head);font-size:1.05rem;letter-spacing:1px;padding:12px 20px;border-radius:5px;
@@ -322,56 +323,56 @@ section{position:relative;z-index:2}
     <div class="svc-grid">
       <article class="svc fade">
         <!-- REPLACE WITH REAL PHOTO: tires / wheels -->
-        <div class="card-photo photo-ph"><svg viewBox="0 0 24 24"><rect x="3" y="6.5" width="18" height="13" rx="2"/><circle cx="12" cy="13" r="3.4"/><path d="M8.5 6.5 9.6 4h4.8l1.1 2.5"/></svg><span class="ph-label">Tires</span></div>
+        <img class="card-photo" src="images/tires.jpg" alt="New and used tires at DRC Automotive in Bristol, IL" loading="lazy">
         <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
         <h3>Tires</h3>
         <p>New and quality used tires, mounting, balancing, rotation, and fast flat repair to get you rolling again.</p>
       </article>
       <article class="svc fade d1">
         <!-- REPLACE WITH REAL PHOTO: brakes / rotors -->
-        <div class="card-photo photo-ph"><svg viewBox="0 0 24 24"><rect x="3" y="6.5" width="18" height="13" rx="2"/><circle cx="12" cy="13" r="3.4"/><path d="M8.5 6.5 9.6 4h4.8l1.1 2.5"/></svg><span class="ph-label">Brakes &amp; Suspension</span></div>
+        <img class="card-photo" src="images/brakes.jpg" alt="Brake and suspension repair at DRC Automotive" loading="lazy">
         <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="2"/></svg></div>
         <h3>Brakes &amp; Suspension</h3>
         <p>Pads, rotors, shocks, and struts — the parts that keep you stopping straight and riding smooth.</p>
       </article>
       <article class="svc fade d2">
         <!-- REPLACE WITH REAL PHOTO: A/C service / vents -->
-        <div class="card-photo photo-ph"><svg viewBox="0 0 24 24"><rect x="3" y="6.5" width="18" height="13" rx="2"/><circle cx="12" cy="13" r="3.4"/><path d="M8.5 6.5 9.6 4h4.8l1.1 2.5"/></svg><span class="ph-label">A/C &amp; Heating</span></div>
+        <img class="card-photo" src="images/ac.jpg" alt="Car air conditioning and heating service at DRC Automotive" loading="lazy">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 14a8 8 0 0 1 16 0"/><path d="M2 18h20"/><path d="M12 6V3M7 7 5 5M17 7l2-2"/></svg></div>
         <h3>A/C &amp; Heating</h3>
         <p>Recharge, leak repair, and heater fixes so you're comfortable through every Illinois season.</p>
       </article>
       <article class="svc fade d3">
         <!-- REPLACE WITH REAL PHOTO: oil change / under-hood -->
-        <div class="card-photo photo-ph"><svg viewBox="0 0 24 24"><rect x="3" y="6.5" width="18" height="13" rx="2"/><circle cx="12" cy="13" r="3.4"/><path d="M8.5 6.5 9.6 4h4.8l1.1 2.5"/></svg><span class="ph-label">Oil &amp; Maintenance</span></div>
+        <img class="card-photo" src="images/oil.jpg" alt="Oil change and maintenance at DRC Automotive" loading="lazy">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3c2 3 5 6 5 9a5 5 0 0 1-10 0c0-3 3-6 5-9z"/></svg></div>
         <h3>Oil &amp; Maintenance</h3>
         <p>Oil, filters, fluids, and factory-schedule service that keeps small problems from becoming big ones.</p>
       </article>
       <article class="svc fade">
         <!-- REPLACE WITH REAL PHOTO: tune-up / engine bay -->
-        <div class="card-photo photo-ph"><svg viewBox="0 0 24 24"><rect x="3" y="6.5" width="18" height="13" rx="2"/><circle cx="12" cy="13" r="3.4"/><path d="M8.5 6.5 9.6 4h4.8l1.1 2.5"/></svg><span class="ph-label">Tune-Ups</span></div>
+        <img class="card-photo" src="images/tuneup.jpg" alt="Engine tune-up at DRC Automotive" loading="lazy">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6a2 2 0 1 0 2.8 2.8l6-6a4 4 0 0 0 5.4-5.4l-2.3 2.3-2.1-2.1z"/></svg></div>
         <h3>Tune-Ups</h3>
         <p>Plugs, belts, and the tune-up work that brings back power and saves you money at the pump.</p>
       </article>
       <article class="svc fade d1">
         <!-- REPLACE WITH REAL PHOTO: exhaust / muffler work -->
-        <div class="card-photo photo-ph"><svg viewBox="0 0 24 24"><rect x="3" y="6.5" width="18" height="13" rx="2"/><circle cx="12" cy="13" r="3.4"/><path d="M8.5 6.5 9.6 4h4.8l1.1 2.5"/></svg><span class="ph-label">Exhaust &amp; Muffler</span></div>
+        <img class="card-photo" src="images/exhaust.jpg" alt="Exhaust and muffler repair at DRC Automotive" loading="lazy">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></div>
         <h3>Exhaust &amp; Muffler</h3>
         <p>Muffler and exhaust repair for a quieter ride — and to help you pass emissions without the headache.</p>
       </article>
       <article class="svc fade d2">
         <!-- REPLACE WITH REAL PHOTO: scan tool / diagnostics -->
-        <div class="card-photo photo-ph"><svg viewBox="0 0 24 24"><rect x="3" y="6.5" width="18" height="13" rx="2"/><circle cx="12" cy="13" r="3.4"/><path d="M8.5 6.5 9.6 4h4.8l1.1 2.5"/></svg><span class="ph-label">Diagnostics</span></div>
+        <img class="card-photo" src="images/diagnostics.jpg" alt="Check-engine diagnostics at DRC Automotive" loading="lazy">
         <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 20h10M8 8h3M8 12h6"/></svg></div>
         <h3>Check-Engine Diagnostics</h3>
         <p>That light on the dash? We read the codes, find the real cause, and fix it right — any make or model.</p>
       </article>
       <article class="svc fade d3">
         <!-- REPLACE WITH REAL PHOTO: roadside / flat tire repair -->
-        <div class="card-photo photo-ph"><svg viewBox="0 0 24 24"><rect x="3" y="6.5" width="18" height="13" rx="2"/><circle cx="12" cy="13" r="3.4"/><path d="M8.5 6.5 9.6 4h4.8l1.1 2.5"/></svg><span class="ph-label">24-Hour Tire Repair</span></div>
+        <img class="card-photo" src="images/tire-repair.jpg" alt="Tire repair at DRC Automotive" loading="lazy">
         <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
         <h3>24-Hour Tire Repair</h3>
         <p>Blowout or a slow leak? Fast tire repair to get you back on the road when you need it most.</p>
@@ -399,7 +400,7 @@ section{position:relative;z-index:2}
       </div>
       <div class="why-photo fade d1">
         <!-- REPLACE WITH REAL PHOTO: the shop, a bay, or the crew -->
-        <div class="photo-ph"><svg viewBox="0 0 24 24"><rect x="3" y="6.5" width="18" height="13" rx="2"/><circle cx="12" cy="13" r="3.4"/><path d="M8.5 6.5 9.6 4h4.8l1.1 2.5"/></svg><span class="ph-label">The shop, a bay, or the crew</span></div>
+        <img src="images/shop.jpg" alt="Inside DRC Automotive's repair shop in Bristol, IL" loading="lazy">
         <div class="stamp">Family-owned<small>since 2011</small></div>
       </div>
     </div>
